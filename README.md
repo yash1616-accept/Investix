@@ -63,11 +63,6 @@ It addresses the challenge of understanding stock portfolio management and finte
 
 ---
 
-## 🎥 Project Demo Video
-
-[![Watch the demo](https://img.youtube.com/vi/52eSnVM5234/hqdefault.jpg)](https://youtu.be/52eSnVM5234)
-
----
 
 ## 🛠 Tech Stack
 
@@ -199,13 +194,7 @@ npm start
 - 🔐 JWT-based authentication
 - ☁️ Cloud deployment (Render + Vercel + MongoDB Atlas)
 
-## 🤝 Connect with Me
-
-Feel free to reach out for feedback, collaborations, or just to say hi!  
-
-- **LinkedIn:** [Aditya Deshmukh](https://www.linkedin.com/in/aditya-deshmukh14/)
-- **Twitter:** [@Aadi_deshmukh14](https://x.com/Aadi_deshmukh14)
-- **GitHub:** [Aditya-deshmukh-1410](https://github.com/Aditya-deshmukh-1410)  
 
 
 
+# Investix
