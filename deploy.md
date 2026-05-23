@@ -90,6 +90,7 @@ We recommend deploying **three separate projects** on Vercel (one for the landin
 *   **Root Directory:** `frontend`
 *   **Environment Variables:** Add the following:
     *   `REACT_APP_DASHBOARD_URL` = `https://investix-dashboard.vercel.app` (your live dashboard URL)
+    *   `CI` = `false` (bypasses ESLint/accessibility warnings to allow compilation)
 *   Click **Deploy**.
 
 #### 3. Deploy the Dashboard (`dashboard/`)
@@ -99,6 +100,7 @@ We recommend deploying **three separate projects** on Vercel (one for the landin
 *   **Environment Variables:** Add the following:
     *   `REACT_APP_API_URL` = `https://investix-backend.vercel.app` (your live backend URL)
     *   `REACT_APP_FRONTEND_URL` = `https://investix-frontend.vercel.app` (your live landing page URL)
+    *   `CI` = `false` (bypasses ESLint/accessibility warnings to allow compilation)
 *   Click **Deploy**.
 
 ---

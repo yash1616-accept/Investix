@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { load } from "@cashfreepayments/cashfree-js";
 
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3002";
-import { load } from "@cashfreepayments/cashfree-js";
 
 const Funds = () => {
   const [cashfree, setCashfree] = useState(null);
