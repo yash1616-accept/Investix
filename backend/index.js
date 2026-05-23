@@ -1,4 +1,6 @@
+const path = require('path');
 require('dotenv').config();
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 const express = require ("express");
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
@@ -17,7 +19,7 @@ const{ PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
 
 const PORT = process.env.PORT || 3002;
-const uri = process.env.MONGO_URL;
+const uri = process.env.MONGO_URL || process.env.MONGO_URI;
 
 const app = express();
 
@@ -419,7 +421,8 @@ app.post("/payments/create-order", async (req, res) => {
 
   } catch (err) {
     console.error("Cashfree order error:", err.response?.data || err);
-    res.status(500).json({ success: false, message: "Order creation failed" });
+    const errMsg = err.response?.data?.message || "Order creation failed";
+    res.status(500).json({ success: false, message: errMsg });
   }
 });
 
@@ -474,3 +477,4 @@ mongoose
   .catch((err) => {
     console.error("MongoDB connection failed:", err);
   });
+// Trigger reload for new env keys

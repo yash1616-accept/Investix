@@ -5,7 +5,6 @@ import { load } from "@cashfreepayments/cashfree-js";
 
 const Funds = () => {
   const [cashfree, setCashfree] = useState(null);
-  const [orderId, setOrderId] = useState(null);
   const [loading, setLoading] = useState(true); // new state for SDK loading
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
@@ -28,26 +27,7 @@ const Funds = () => {
     initCashfree();
   }, []);
 
-  // Create order from backend
-  const createOrder = async () => {
-    try {
-      const res = await axios.post("http://localhost:3002/payments/create-order", {
-        amount,
-        userId,
-      });
-      console.log("Order created:", res.data);
 
-      setOrderId(res.data.data.order_id);
-
-      // Return Cashfree order_token for checkout
-    return res.data.data.order_token; 
-
-    } catch (error) {
-      console.error("Create order error:", error.response || error);
-      alert("Failed to create order");
-      return null; // ensure checkout stops if order creation fails
-    }
-  };
 
 
 
@@ -92,8 +72,6 @@ const Funds = () => {
 
     const { payment_session_id, order_id } = res.data.data;
 
-    setOrderId(order_id);
-
     const result = await cashfree.checkout({
       paymentSessionId: payment_session_id,
       redirectTarget: "_modal",
@@ -106,7 +84,8 @@ const Funds = () => {
 
   } catch (err) {
     console.error("Payment init error:", err);
-    alert("Payment initialization failed");
+    const errMsg = err.response?.data?.message || "Payment initialization failed";
+    alert(errMsg);
   }
 };
 
