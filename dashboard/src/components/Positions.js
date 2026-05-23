@@ -66,13 +66,15 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import GeneralContext from "./GeneralContext";
 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3002";
+
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
   const { openBuyWindow } = useContext(GeneralContext);
    console.log("openBuyWindow:", openBuyWindow);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allPositions").then((res) => {
+    axios.get(`${API_URL}/allPositions`).then((res) => {
       setAllPositions(res.data);
     });
   }, []);

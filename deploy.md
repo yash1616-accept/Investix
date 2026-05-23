@@ -88,14 +88,17 @@ We recommend deploying **three separate projects** on Vercel (one for the landin
 *   **Project Name:** `investix-frontend`
 *   **Framework Preset:** `Create React App`
 *   **Root Directory:** `frontend`
-*   *Note: If you have hardcoded API URLs in your frontend pointing to `localhost:3002`, update them to point to your backend Vercel URL (e.g. `https://investix-backend.vercel.app`).*
+*   **Environment Variables:** Add the following:
+    *   `REACT_APP_DASHBOARD_URL` = `https://investix-dashboard.vercel.app` (your live dashboard URL)
 *   Click **Deploy**.
 
 #### 3. Deploy the Dashboard (`dashboard/`)
 *   **Project Name:** `investix-dashboard`
 *   **Framework Preset:** `Create React App`
 *   **Root Directory:** `dashboard`
-*   *Note: Ensure all API and redirect URLs in the dashboard code (e.g., in `Funds.js` and `WatchList.js`) are updated from `localhost:3002` to your production backend Vercel URL.*
+*   **Environment Variables:** Add the following:
+    *   `REACT_APP_API_URL` = `https://investix-backend.vercel.app` (your live backend URL)
+    *   `REACT_APP_FRONTEND_URL` = `https://investix-frontend.vercel.app` (your live landing page URL)
 *   Click **Deploy**.
 
 ---

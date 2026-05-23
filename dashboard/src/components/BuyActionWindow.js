@@ -3,6 +3,8 @@ import axios from "axios";
 import GeneralContext from "./GeneralContext";
 import "./BuyActionWindow.css";
 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3002";
+
 const BuyActionWindow = ({ stock, mode }) => {
   const { closeBuyWindow } = useContext(GeneralContext);
 
@@ -30,7 +32,7 @@ const BuyActionWindow = ({ stock, mode }) => {
     }
 
     axios
-      .post("http://localhost:3002/newOrder", {
+      .post(`${API_URL}/newOrder`, {
         id: stock._id,     // backend uses this
         name: stock.name,  // UI uses this
         qty,

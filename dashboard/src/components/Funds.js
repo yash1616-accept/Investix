@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3002";
 import { load } from "@cashfreepayments/cashfree-js";
 
 const Funds = () => {
@@ -37,7 +39,7 @@ const Funds = () => {
 
   try {
     const res = await axios.post(
-      "http://localhost:3002/payments/verify",
+      `${API_URL}/payments/verify`,
       { orderId, userId }
     );
 
@@ -66,7 +68,7 @@ const Funds = () => {
 
   try {
     const res = await axios.post(
-      "http://localhost:3002/payments/create-order",
+      `${API_URL}/payments/create-order`,
       { amount, userId }
     );
 

@@ -29,10 +29,12 @@ function getCookie(name) {
   return null;
 }
 
+const FRONTEND_URL = process.env.REACT_APP_FRONTEND_URL || "http://localhost:3000";
+
 //  AUTH CHECK
 const isAuth = getCookie("isAuth");
 if (isAuth !== "true") {
-  window.location.href = "http://localhost:3000";
+  window.location.href = FRONTEND_URL;
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

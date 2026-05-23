@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+const DASHBOARD_URL = process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3001";
+
 function Signup() {
   const [validated, setValidated] = useState(false);
   const [username, setUsername] = useState("");
@@ -23,7 +25,7 @@ function Signup() {
     //  Set cookie (accessible to dashboard)
     document.cookie = "isAuth=true; path=/"; 
     //  Redirect to dashboard
-    window.location.href = "http://localhost:3001";
+    window.location.href = DASHBOARD_URL;
   } else {
     setError("Invalid username or password");
   }
