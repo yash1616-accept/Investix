@@ -106,7 +106,7 @@ const Funds = () => {
           >
             {loading ? "Loading..." : "Add funds"}
           </button>
-          <Link to="#" className="btn btn-blue">
+          <Link to="/funds" className="btn btn-blue">
             Withdraw
           </Link>
         </div>
@@ -164,7 +164,7 @@ const Funds = () => {
         <div className="funds-col">
           <div className="commodity">
             <p>You don't have a commodity account</p>
-            <Link to="#" className="btn btn-blue">
+            <Link to="/funds" className="btn btn-blue">
               Open account
             </Link>
           </div>

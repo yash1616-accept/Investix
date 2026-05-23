@@ -12,19 +12,19 @@ function Footer() {
                         All rights reserved.
                     </p>
 
-                    <a href="#" aria-label="Twitter">
+                    <a href="/" aria-label="Twitter">
                         <i className="fa-brands fa-x-twitter"></i>
                     </a>
-                    <a href="#" aria-label="Facebook">
+                    <a href="/" aria-label="Facebook">
                         <i className="fa-brands fa-facebook-f"></i>
                     </a>
-                    <a href="#" aria-label="Linkedin">
+                    <a href="/" aria-label="Linkedin">
                         <i className="fa-brands fa-linkedin-in"></i>
                     </a>
-                    <a href="#" aria-label="Instagram">
+                    <a href="/" aria-label="Instagram">
                         <i className="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="#" aria-label="Telegram">
+                    <a href="/" aria-label="Telegram">
                         <i className="fa-brands fa-telegram"></i>
                     </a>
                 </div>
@@ -33,29 +33,29 @@ function Footer() {
 
                 <div className='col footer-links'>
                     <p >Company</p>
-                    <a href=''>About</a><br/>
-                    <a href=''>Products</a><br/>
-                    <a href=''>pricing</a><br/>
-                    <a href=''>Referral programme</a><br/>
-                    <a href=''>Careers</a><br/>
-                    <a href=''>Investix.tech</a><br/>
-                    <a href=''>Press & media</a><br/>
-                    <a href=''>Investix cares (CSR)</a><br/>
+                    <a href='/about'>About</a><br/>
+                    <a href='/products'>Products</a><br/>
+                    <a href='/pricing'>pricing</a><br/>
+                    <a href='/'>Referral programme</a><br/>
+                    <a href='/'>Careers</a><br/>
+                    <a href='/'>Investix.tech</a><br/>
+                    <a href='/'>Press & media</a><br/>
+                    <a href='/'>Investix cares (CSR)</a><br/>
                 </div>
 
                 <div className='col footer-links'>
                     <p>Support</p>
-                    <a href=''>Contact</a><br/>
-                    <a href=''>Support portal</a><br/>
-                    <a href=''>Z-connect blog</a><br/>
-                    <a href=''>List of charges</a><br/>
-                    <a href=''>Download & Resources</a><br/>
+                    <a href='/support'>Contact</a><br/>
+                    <a href='/support'>Support portal</a><br/>
+                    <a href='/'>Z-connect blog</a><br/>
+                    <a href='/'>List of charges</a><br/>
+                    <a href='/'>Download & Resources</a><br/>
                 </div>
                 <div className='col footer-links'>
                     <p>Account</p>
-                    <a href=''>Open an Account</a><br/>
-                    <a href=''>Fund transfer</a><br/>
-                    <a href=''>60 days challenge</a><br/>
+                    <a href='/signup'>Open an Account</a><br/>
+                    <a href='/'>Fund transfer</a><br/>
+                    <a href='/'>60 days challenge</a><br/>
                 </div>
             </div>
 

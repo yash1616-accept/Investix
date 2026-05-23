@@ -45,9 +45,9 @@ function Team() {
 
           <p>
             connect on{" "}
-            <a href="#" className="text-decoration-none">HomePage</a> /{" "}
-            <a href="#" className="text-decoration-none">TradingQnQ</a> /{" "}
-            <a href="#" className="text-decoration-none">Twitter</a>
+            <a href="/" className="text-decoration-none">HomePage</a> /{" "}
+            <a href="/" className="text-decoration-none">TradingQnQ</a> /{" "}
+            <a href="/" className="text-decoration-none">Twitter</a>
           </p>
         </div>
 
@@ -92,8 +92,8 @@ function Team() {
 
           <p>
             connect on{" "}
-            <a href="#" className="text-decoration-none">HomePage</a> /{" "}
-            <a href="#" className="text-decoration-none">Twitter</a>
+            <a href="/" className="text-decoration-none">HomePage</a> /{" "}
+            <a href="/" className="text-decoration-none">Twitter</a>
           </p>
         </div>
 
